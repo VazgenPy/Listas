@@ -1,0 +1,3 @@
+from qgis.core import QgsGeometry, QgsPoint # Define exterior ring coordinates, notice how the first point repeats at the end of the list. p1 = QgsPoint(0, 0) p2 = QgsPoint(10, 0) p3 = QgsPoint(10, 10) p4 = QgsPoint(0, 10) li_out_ring = [p1, p2, p3, p4, p1] # Define interior ring coordinates, notice how the first point repeats at the end of the list. p5 = QgsPoint(2, 2) p6 = QgsPoint(8, 2) p7 = QgsPoint(8, 8) p8 = QgsPoint(2, 8) li_inn_ring = [p5, p6, p7, p8, p5] # Creates geometry. polygon = QgsGeometry.fromPolygon([li_ext_ring, li_inn_ring])
+
+Fuente: https://www.i-ciencias.com/pregunta/125569/hacer-donut-poligonos-con-python-en-qgis
